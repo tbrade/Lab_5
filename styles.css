@@ -39,6 +39,10 @@ li {
   height: 80vh;
 }
 
+#map2 {
+  height: 80vh;
+}
+
 #list {
   margin-top: 5px;
 }
@@ -50,3 +54,11 @@ li {
 		padding:15px 25px 45px 30px;
     text-align: left;
 	}
+
+#legend2 {
+  	line-height: 0px;
+  	background: white;
+  	opacity: 0.8;
+  	padding:15px 25px 45px 30px;
+    text-align: left;
+  }

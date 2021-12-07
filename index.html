@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-    <link rel="stylesheet" href="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/browse/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-legend@1.0.2/leaflet-legend.min.js"></script>
-    <script src="https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/browse/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   </head>
   <body>
 
@@ -29,7 +30,7 @@
     <div id="map"></div>
     <div id="legend">
 		<h3>African clawed frog Distribution</h3>
-		<ul id= "legend1" style="list-style-type:none">
+		<ul id= "legend" style="list-style-type:none">
       <li>
         <svg width="40" height="14">
 					<rect width="28" height="14" x="0" y="0" stroke="#FF2D00" stroke-width="3" fill="#FF2D00" fill-opacity=".5"/> <!--stroke color from W3 Schools HTML Color Picker.  The same color is used in the JavaScript-->
@@ -38,7 +39,6 @@
       </li>
 		</ul>
 	</div>
-    <script src="javascript.js"></script>
     <h2>Why it Matters</h2>
 
     <div id="list">
@@ -46,8 +46,20 @@
       <li> With individuals growing up to 5.5 inches long, African clawed frogs can eat anything they can fit into their mouth including other frogs.
       <li> Has the ability to spread the deadly Bd fungus which has killed amphibians worldwide jeopardizing native species.
       <li> Potential to spread exotic parasites that may be taken up in native bird species.
-      <li>
+      <li> A dramatic reduction in reproduction rates among native amphibians has been observed following the introduction of African clawed frogs in other countries.
     </div>
-    <p>African clawed frogs eat any organism that they can fit in their mouth.  Individuals can grow up to 5.5 inches longthe African clawed frog is able to consume other frogs and even small birds.  In addition, the African clawed frog like other amphibians can be a carrier of the chytrid fungus, a disease that has been known to wipe out entire species of frogs.  When the frog migrates, it could spread this fungus to other ponds which could jeopardize native amphibian populations.</p>
+    <div id="map2"></div>
+    <div id="legend2">
+		<h3>Potential Spread</h3>
+		<ul id= "legend2" style="list-style-type:none">
+      <li>
+        <svg width="40" height="14">
+					<rect width="28" height="14" x="0" y="0" stroke="#FF2D00" stroke-width="3" fill="#FF2D00" fill-opacity=".5"/> <!--stroke color from W3 Schools HTML Color Picker.  The same color is used in the JavaScript-->
+				</svg>
+				<text>Potential spread from starting point</text>
+      </li>
+		</ul>
+	</div>
+    <script src="javascript.js"></script>
   </body>
 </html>
