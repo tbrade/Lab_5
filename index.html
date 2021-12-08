@@ -7,59 +7,71 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <link rel="stylesheet" href="leaflet.legend.css"/>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="MarkerCluster.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/browse/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet-legend@1.0.2/leaflet-legend.min.js"></script>
-    <script src="https://unpkg.com/browse/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="MarkerCluster.Default.css"/>
+    <script src="leaflet.markercluster.js"></script>
+    <script src="leaflet.legend.js"></script>
   </head>
   <body>
 
     <h1>The Potential Spread of the African clawed frog (Xenopus laevis) in Western Washington</h1>
     <img src="Africanclawedfrog.jpg"></img>
 
-    <center><p>Picture of an African clawed frog <a target = "_blank" href ="https://wdfw.wa.gov/sites/default/files/styles/half_width_slide_420w_1_1/public/2021-08/acf.jpg?itok=ZfKY8izs">&copy WSDFW.</a>  The name is derived from the claws on the hind feet.</p></center>
+    <center><p>Picture of an African clawed frog <a target="_blank" href ="https://wdfw.wa.gov/sites/default/files/styles/half_width_slide_420w_1_1/public/2021-08/acf.jpg?itok=ZfKY8izs">&copy Brian Gratwick retrieved from WSDFW.</a>  The name is derived from the claws on the hind feet.</p></center>
     <div id="heading3">
     <h3 id="intro">The African clawed frog (Xenopus laevis) is a species native to Africa.  Used in scientific experiments around the world and as a pet, the improper release of these frogs has resulted in invasive populations that jeopardize local biota.  Within the last decade the African clawed frog has been found in three cities in Washington State: Lacey, Bothel, and Issaquah.</h3>
     </div>
 
     <div id="map"></div>
-    <div id="legend">
-		<h3>African clawed frog Distribution</h3>
-		<ul id= "legend" style="list-style-type:none">
-      <li>
-        <svg width="40" height="14">
-					<rect width="28" height="14" x="0" y="0" stroke="#FF2D00" stroke-width="3" fill="#FF2D00" fill-opacity=".5"/> <!--stroke color from W3 Schools HTML Color Picker.  The same color is used in the JavaScript-->
-				</svg>
-				<text>Cities with ACF</text>
-      </li>
-		</ul>
-	</div>
     <h2>Why it Matters</h2>
 
     <div id="list">
     <ul>
-      <li> With individuals growing up to 5.5 inches long, African clawed frogs can eat anything they can fit into their mouth including other frogs.
-      <li> Has the ability to spread the deadly Bd fungus which has killed amphibians worldwide jeopardizing native species.
-      <li> Potential to spread exotic parasites that may be taken up in native bird species.
-      <li> A dramatic reduction in reproduction rates among native amphibians has been observed following the introduction of African clawed frogs in other countries.
-    </div>
+      <li id="list1"> With individuals growing up to <a target="_blank" href="https://wdfw.wa.gov/sites/default/files/publications/02267/wdfw02267.pdf">5.5 inches long</a>, African clawed frogs can eat anything they can fit into their mouth including other frogs.
+      <li id="list1"> The African clawed frog can spread the deadly Bd fungus which has killed amphibians worldwide jeopardizing native species.
+      <li id="list1"> The African clawed frog carries <a target="_blank" href="https://doi.org/10.2307/1447564">exotic parasites which could spread in native bird species</a>.
+      <li id="list1"> A dramatic reduction in reproduction rates among native amphibians has been observed following the introduction of African clawed frogs in other countries <a target="_blank" href="http://dx.doi.org/10.1007/s10530-010-9911-8">source</a>.
+    </ul>
+    <p> Note: The African clawed frog has been known to travel up to 2 km. (about 1.24 mi.) away from its starting point <a target="_blank" href="https://dx.doi.org/10.7717%2Fpeerj.2474">source</a>.
+  </div>
     <div id="map2"></div>
-    <div id="legend2">
-		<h3>Potential Spread</h3>
-		<ul id= "legend2" style="list-style-type:none">
-      <li>
-        <svg width="40" height="14">
-					<rect width="28" height="14" x="0" y="0" stroke="#FF2D00" stroke-width="3" fill="#FF2D00" fill-opacity=".5"/> <!--stroke color from W3 Schools HTML Color Picker.  The same color is used in the JavaScript-->
-				</svg>
-				<text>Potential spread from starting point</text>
-      </li>
-		</ul>
-	</div>
+  <h2>What You Can Do</h2>
+  <div id="list">
+  <ul>
+    <li> Learn to identify the African clawed frog (See clickable picture quiz below! Perfect identification score = 3).
+    <li> Report any sightings of the African clawed frog in Washington State <a target="_blank" href="https://invasivespecies.wa.gov/report-a-sighting/invasive-animals/">here</a>.
+    <li> Spread the word! Tell others about the African clawed frog.
+  </ul>
+  </div>
+  <div class="grid">     <!--Quiz-->
+  <div id="quiz">
+  <h1>Picture Quiz</h1>
+  <hr style="margin-bottom: 20px">
+  <p id="question"></p>
+  <div class="buttons">
+  <center>
+  <button id="btn0"><span id="choice0"></span></button>
+  <button id="btn1"><span id="choice1"></span></button>
+  </center>
+  </div>
+  <hr style="margin-top: 50px">
+  <footer>
+  <p id="progress">Question x of y</p>
+  </footer>
+  </div>
+</div>     <!--Quiz-->
+<div id="references">
+<p>Picture sources for quiz:
+  Question 1 (from left to right): Photo &copy Brian Gratwick retrieved from <a target="_blank" href="https://wdfw.wa.gov/sites/default/files/styles/half_width_slide_420w_1_1/public/2021-08/acf.jpg?itok=ZfKY8izs">WSDFW</a>.; "American Bullfrog (Rana catesbeiana) Upper Pool Marshbird Survey, 05 May 2012" by <a target="_blank" href="https://www.flickr.com/photos/43322816@N08">U. S. Fish and Wildlife Service - Northeast Region</a> is marked with <a target="_blank" href="https://creativecommons.org/publicdomain/mark/1.0/?ref=ccsearch&atype=rich">CC PDM 1.0</a>.</p>
+<p>Question 2 (from left to right): <a target="_blank" href="https://www.flickr.com/photos/52133016@N08/6122084730">"Pacific Chorus Frog Photo Credit: Teal Waterstrat (USFWS)"</a> by USFWS Pacific is licensed under <a target="_blank" href="https://creativecommons.org/licenses/by-nc/2.0/?ref=ccsearch&atype=rich">CC BY-NC 2.0</a>; <a target="_blank" href="https://www.flickr.com/photos/19731486@N07/30775424133"> "African clawed frog"</a> by <a target="_blank" href="https://www.flickr.com/photos/19731486@N07">brian.gratwicke</a> is licensed under <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich">CC BY 2.0</a>.
+<p>Question 3 (from left to right): N.A. retrieved from <a target="_blank" href="https://www.rochester.edu/currents/V43/N05/pics/tadpole.jpg">University of Rochester</a>; <a target="_blank" href="https://www.flickr.com/photos/70097310@N00/3686262404">"Pacific Chorus Frog Tadpoles"</a> by <a target="_blank" href="https://www.flickr.com/photos/70097310@N00">yaquina</a> is licensed under <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich">CC BY 2.0</a>.
+</div>
     <script src="javascript.js"></script>
   </body>
 </html>
